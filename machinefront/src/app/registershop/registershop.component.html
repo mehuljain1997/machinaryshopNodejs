@@ -1,0 +1,40 @@
+<p>registershop works!</p>
+<button (click) ="Fetchshop()">Fetch shop</button>
+<br>
+
+<form  style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="shnm"><b>ShopName</b></label>
+    <input type="text" placeholder="Enter Email" name="shnm1" #shnm  required >
+
+    <label for="shid"><b>ShopId</b></label>
+    <input type="text" placeholder="Enter Password" name="shid1" #shid  required >
+
+    <label for="shty"><b>ShopType</b></label>
+    <input type="text" placeholder="Repeat Password" name="shty1" #shty  required >
+
+    <label for="ownm"><b>OwnerName</b></label>
+    <input type="text" placeholder="Repeat Password" name="ownm1" #ownm  required >
+    
+    <label for="shad"><b>ShopAddress</b></label>
+    <input type="text" placeholder="Repeat Password" name="shad1" #shad required >
+
+    <label for="owcn"><b>OwnerContactNo</b></label>
+    <input type="text" placeholder="Repeat Password" name="shcn1" #owcn required >
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn" (click) = "backToHome()">Cancel</button>
+      <button type="submit" class="signupbtn" (click) = "createShop(shid.value,shnm.value,shad.value,shty.value,ownm.value,owcn.value)">Register Shop</button>
+    </div>
+  </div>
+</form> 
+
+<br>
+
+<div>
+  <button (click) = "backToHome()">BackToHomepage</button>
+</div>

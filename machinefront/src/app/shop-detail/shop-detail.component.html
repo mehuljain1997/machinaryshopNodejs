@@ -1,0 +1,51 @@
+<p>shop-detail works!</p>
+
+<h2 style="text-align: center;">All  Record OF  Products </h2>
+
+
+
+<div >
+<table class = "selecttable">
+    <thead>
+        <tr>
+            <th>ShopId</th>
+            <th>ShopType</th> 
+            <th>ShopName</th>
+            <th>OwnerName</th>
+            <th>ShopAddress</th>
+            <th>OwnerContactNo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of xy">
+            
+            <td>{{user.ShopId}}</td>        
+            <td>{{user.ShopType}}</td>
+            <td>{{user.ShopName}}</td>
+            <td>{{user.OwnerName}}</td>
+            <td>{{user.ShopAddress}}</td>
+            <td>{{user.OwnerContactNo}}</td>
+            <td>  <button (click)="deleteShop(user.ShopId)" mat-flat-button color="accent">Delete Row</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<label>Select ShopId and shop delete</label>
+<select (change)="modo($event.target.value)">
+<option *ngFor="let user of xy" 
+    [selected]="user.ShopId == 'back'">{{user.ShopId}}</option>
+</select>
+
+
+<br>
+<br>
+<div>
+    <button (click) = "backToHome()">BackToHomepage</button>
+</div>
+
+
